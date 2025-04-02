@@ -1,0 +1,26 @@
+﻿services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserverexpress1
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    restart: always
+    volumes:
+      - mssql_data:/var/opt/mssql
+    
+  webapi:
+    build:
+      context: .
+      dockerfile: MetaExchanger.Api/Dockerfile
+    depends_on:
+      - mssql
+    environment:
+      - Database__ConnectionString=Server=mssql,1433;Database=MyDatabase;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;
+    ports:
+      - "8081:8081"
+
+volumes:
+  mssql_data:

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaExchanger.Api", "MetaExchanger.Api\MetaExchanger.Api.csproj", "{D349251D-C3C8-42AD-ABDC-1AC8601BC7DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaExchanger.Application", "MetaExchanger.Application\MetaExchanger.Application.csproj", "{777B5420-28DA-437B-968D-998D807CDE7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaExchanger.Contracts", "MetaExchanger.Contracts\MetaExchanger.Contracts.csproj", "{C3ED44C9-218B-4199-A86C-0B4029979D80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionsItems", "SolutionsItems", "{CA3AB462-86FD-4089-8BF5-2B2F187521F4}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D349251D-C3C8-42AD-ABDC-1AC8601BC7DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D349251D-C3C8-42AD-ABDC-1AC8601BC7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D349251D-C3C8-42AD-ABDC-1AC8601BC7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D349251D-C3C8-42AD-ABDC-1AC8601BC7DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777B5420-28DA-437B-968D-998D807CDE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777B5420-28DA-437B-968D-998D807CDE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777B5420-28DA-437B-968D-998D807CDE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777B5420-28DA-437B-968D-998D807CDE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3ED44C9-218B-4199-A86C-0B4029979D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3ED44C9-218B-4199-A86C-0B4029979D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3ED44C9-218B-4199-A86C-0B4029979D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3ED44C9-218B-4199-A86C-0B4029979D80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70C848E7-CE76-4D2B-A3AB-3B1FA2B4F616}
+	EndGlobalSection
+EndGlobal
