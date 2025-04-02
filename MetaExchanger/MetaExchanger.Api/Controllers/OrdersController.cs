@@ -3,6 +3,7 @@ using MetaExchanger.Contracts.Requests;
 using MetaExchanger.Contracts.Responses;
 using MetaExchanger.Api.Mapping;
 using Microsoft.AspNetCore.Mvc;
+using MetaExchanger.Application.Common;
 
 namespace MetaExchanger.Api.Controllers
 {
@@ -23,18 +24,19 @@ namespace MetaExchanger.Api.Controllers
         /// <param name="request">Request object</param>
         /// <param name="token"></param>
         /// <returns></returns>
-        [HttpPost]
-        [ProducesResponseType(typeof(OrderResponce), StatusCodes.Status201Created)]
+        [HttpGet]
+        [ProducesResponseType(typeof(OrderResponce), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationFailureResponce), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreateOrder([FromBody] CreateOrderRequest request, CancellationToken token)
+        public async Task<IActionResult> CreateOrder(OperationType OperationType, decimal Amount, CancellationToken token)
         {
+            var request = new GetOrdersRequest() { Amount = Amount , OperationType = OperationType };
             var domainOrder = request.ToDomainOrder();
-            var result =  await _CrExService.CreateAsync(domainOrder, token);
+            var result =  await _CrExService.GetOrdersAsync(domainOrder, token);
             if (!result.Ok)
                 return BadRequest(result.Error);
 
             var responce = result.Value.ToOrderResponce();
-            return Created(string.Empty, responce);
+            return Ok(responce);
         }
     }
 }

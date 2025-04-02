@@ -6,6 +6,6 @@ namespace MetaExchanger.Application.Services
 {
     public interface ICryptoExchangeService
     {
-        Task<Result<IEnumerable<DomainOrder>>> CreateAsync(DomainOrder movie, CancellationToken token = default);
+        Task<Result<IEnumerable<DomainOrder>>> GetOrdersAsync(DomainOrder movie, CancellationToken token = default);
     }
 }
