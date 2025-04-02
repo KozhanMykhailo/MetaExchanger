@@ -24,6 +24,7 @@ namespace MetaExchanger.Api.Controllers
         /// <param name="request">Request object</param>
         /// <param name="token"></param>
         /// <returns></returns>
+        /// /// api/v1/orders?OperationType=Buy&Amount=10
         [HttpGet]
         [ProducesResponseType(typeof(OrderResponce), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationFailureResponce), StatusCodes.Status400BadRequest)]
