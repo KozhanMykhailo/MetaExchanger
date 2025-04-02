@@ -12,7 +12,6 @@ namespace MetaExchanger.Api.Mapping
             {
                 Id = Guid.NewGuid(),
                 Time = DateTime.Now,
-                //CryptoExchangeId = request.CryptoExchangeId,
                 Type = request.OperationType,
                 Kind = Kind.Limit,
                 Amount = request.Amount
