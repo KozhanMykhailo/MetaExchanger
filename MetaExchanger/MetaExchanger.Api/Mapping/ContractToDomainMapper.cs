@@ -6,7 +6,7 @@ namespace MetaExchanger.Api.Mapping
 {
     public static class ContractToDomainMapper
     {
-        public static DomainOrder ToDomainOrder(this CreateOrderRequest request)
+        public static DomainOrder ToDomainOrder(this GetOrdersRequest request)
         {
             return new DomainOrder
             {

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MetaExchanger.Application.Services
 {
-    internal class CryptoExchangeService : ICryptoExchangeService
+    public class CryptoExchangeService : ICryptoExchangeService
     {
         private readonly IValidator<DomainOrder> _orderValidator;
         private readonly ApplicationDbContext _dbContext;
@@ -17,7 +17,7 @@ namespace MetaExchanger.Application.Services
             _dbContext = dbContext;
         }
 
-        public async Task<Result<IEnumerable<DomainOrder>>> CreateAsync(DomainOrder domainOrder, CancellationToken token = default)
+        public async Task<Result<IEnumerable<DomainOrder>>> GetOrdersAsync(DomainOrder domainOrder, CancellationToken token = default)
         {
             await _orderValidator.ValidateAndThrowAsync(domainOrder, cancellationToken: token);
 
@@ -119,6 +119,7 @@ namespace MetaExchanger.Application.Services
 
             domainOrder.Price = order.Price;
             domainOrder.CryptoExchangeId = order.CryptoExchange.Id;
+            //just create new order in DB
             var newOrder = domainOrder.Convert();
 
             _dbContext.Orders.Add(newOrder);
