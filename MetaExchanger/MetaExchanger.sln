@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionsItems", "Solutions
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaExchanger.Application.Tests", "MetaExchanger.Application.Tests\MetaExchanger.Application.Tests.csproj", "{69D19796-F8E2-48A5-AFF1-55BF280ABAE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaExchanger.Application.Tests", "MetaExchanger.Application.Tests\MetaExchanger.Application.Tests.csproj", "{69D19796-F8E2-48A5-AFF1-55BF280ABAE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaExchanger.Api.IntegrationTests", "MetaExchanger.Api.IntegrationTests\MetaExchanger.Api.IntegrationTests.csproj", "{CEB7A5DC-A949-4A27-9D7D-31AEA440C49D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{69D19796-F8E2-48A5-AFF1-55BF280ABAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D19796-F8E2-48A5-AFF1-55BF280ABAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D19796-F8E2-48A5-AFF1-55BF280ABAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB7A5DC-A949-4A27-9D7D-31AEA440C49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB7A5DC-A949-4A27-9D7D-31AEA440C49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB7A5DC-A949-4A27-9D7D-31AEA440C49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB7A5DC-A949-4A27-9D7D-31AEA440C49D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
