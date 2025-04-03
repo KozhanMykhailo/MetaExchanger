@@ -9,11 +9,11 @@ namespace MetaExchanger.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class OrdersController : Controller
+    public class MetaExchangersController : Controller
     {
         private readonly ICryptoExchangeService _CrExService;
 
-        public OrdersController(ICryptoExchangeService crExService)
+        public MetaExchangersController(ICryptoExchangeService crExService)
         {
             _CrExService = crExService;
         }
@@ -24,11 +24,11 @@ namespace MetaExchanger.Api.Controllers
         /// <param name="request">Request object</param>
         /// <param name="token"></param>
         /// <returns></returns>
-        /// /// api/v1/orders?OperationType=Buy&Amount=10
+        /// /// api/v1/metaexchangers?OperationType=Buy&Amount=10
         [HttpGet]
         [ProducesResponseType(typeof(OrderResponce), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationFailureResponce), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreateOrder(OperationType OperationType, decimal Amount, CancellationToken token)
+        public async Task<IActionResult> GetBestExecution(OperationType OperationType, decimal Amount, CancellationToken token)
         {
             var request = new GetOrdersRequest() { Amount = Amount , OperationType = OperationType };
             var domainOrder = request.ToDomainOrder();
