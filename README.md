@@ -25,7 +25,10 @@ How to run:
 	- http://localhost:8080/api/v1/metaexchangers?OperationType=Sell&Amount=2
 	
 Also you can run locally through VS19+:
+- Run mssql server(locally or in docker, check connection string)
 
 - Open MetaExchanger.sln -> F5
 
 - Open swagger: http://localhost:5229/swagger/index.html
+
+
