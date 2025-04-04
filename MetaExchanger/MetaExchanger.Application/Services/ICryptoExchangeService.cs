@@ -8,6 +8,9 @@ namespace MetaExchanger.Application.Services
     /// </summary>
     public interface ICryptoExchangeService
     {
+        /// <summary>
+        /// Process GET request. Find the best execution for request as list of Orders.
+        /// </summary>
         Task<Result<IEnumerable<DomainOrder>>> GetBestExecutionAsync(DomainOrder movie, CancellationToken token = default);
     }
 }
