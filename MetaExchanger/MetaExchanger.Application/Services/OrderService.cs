@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MetaExchanger.Application.Services
 {
-    /// <summary>
-    /// Domain order service.
-    /// </summary>
+    /// <inheritdoc cref="IOrderService"/>
     public class OrderService : IOrderService
     {
         private readonly ApplicationDbContext _dbContext;

@@ -5,9 +5,7 @@ using MetaExchanger.Application.Infrastructure;
 
 namespace MetaExchanger.Application.Services
 {
-    /// <summary>
-    /// Crypto exchange service.
-    /// </summary>
+    /// <inheritdoc cref="ICryptoExchangeService"/>
     public class CryptoExchangeService : ICryptoExchangeService
     {
         private readonly IValidator<DomainOrder> _orderValidator;
@@ -21,9 +19,6 @@ namespace MetaExchanger.Application.Services
             _orderService = orderService;
         }
 
-        /// <summary>
-        /// Process GET request. Find the best execution for request as list of Orders.
-        /// </summary>
         public async Task<Result<IEnumerable<DomainOrder>>> GetBestExecutionAsync(DomainOrder domainOrder, CancellationToken token = default)
         {
             await _orderValidator.ValidateAndThrowAsync(domainOrder, cancellationToken: token);
