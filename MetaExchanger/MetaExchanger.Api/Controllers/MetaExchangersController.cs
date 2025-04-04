@@ -32,7 +32,7 @@ namespace MetaExchanger.Api.Controllers
         {
             var request = new GetOrdersRequest() { Amount = Amount , OperationType = OperationType };
             var domainOrder = request.ToDomainOrder();
-            var result =  await _CrExService.GetOrdersAsync(domainOrder, token);
+            var result =  await _CrExService.GetBestExecutionAsync(domainOrder, token);
             if (!result.Ok)
                 return BadRequest(result.Error);
 

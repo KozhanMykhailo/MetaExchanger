@@ -11,6 +11,7 @@ namespace MetaExchanger.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<ICryptoExchangeService, CryptoExchangeService>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddValidatorsFromAssemblyContaining<IApplicationMarker>(ServiceLifetime.Singleton);
             return services;
         }

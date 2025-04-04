@@ -4,7 +4,7 @@ using MetaExchanger.Application.Models;
 namespace MetaExchanger.Application.Domain
 {
     /// <summary>
-    /// Domain mapper.
+    /// Mapper for DomainOrder entity. Contains extended methods.
     /// </summary>
     public static class Mapper
     {

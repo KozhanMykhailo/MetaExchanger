@@ -3,7 +3,7 @@
 namespace MetaExchanger.Application.Domain
 {
     /// <summary>
-    /// Domain entity, between dbContext and response(dto).
+    /// Domain entity.
     /// </summary>
     public class DomainOrder
     {

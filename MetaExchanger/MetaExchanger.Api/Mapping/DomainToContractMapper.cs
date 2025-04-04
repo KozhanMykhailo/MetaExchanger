@@ -6,6 +6,9 @@ using System.Text.Json.Serialization;
 
 namespace MetaExchanger.Api.Mapping
 {
+    /// <summary>
+    /// Map IEnumerable<DomainOrder> to OrderResponce.
+    /// </summary>
     public static class DomainToContractMapper
     {
         public static OrderResponce ToOrderResponce(this IEnumerable<DomainOrder> domainOrders)

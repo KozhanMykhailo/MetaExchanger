@@ -4,6 +4,9 @@ using MetaExchanger.Contracts.Requests;
 
 namespace MetaExchanger.Api.Mapping
 {
+    /// <summary>
+    /// Map GetOrdersRequest to DomainOrder.
+    /// </summary>
     public static class ContractToDomainMapper
     {
         public static DomainOrder ToDomainOrder(this GetOrdersRequest request)
