@@ -19,13 +19,5 @@ namespace MetaExchanger.Application.Infrastructure
                 .HasForeignKey(o => o.CryptoExchangeId)
                 .OnDelete(DeleteBehavior.Cascade);           
         }
-
-        //uncommit and make migration
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer();
-
-        //    base.OnConfiguring(optionsBuilder);
-        //}
     }
 }

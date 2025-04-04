@@ -1,11 +1,8 @@
 ﻿using MetaExchanger.Application.Domain;
 using MetaExchanger.Contracts.Responses;
-using Newtonsoft.Json;
 using System.Data;
-using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Text.Unicode;
 
 namespace MetaExchanger.Api.Mapping
 {
@@ -21,10 +18,9 @@ namespace MetaExchanger.Api.Mapping
                     JsonNumberHandling.WriteAsString,
                 WriteIndented = true
             };
-            //string jsonString = JsonSerializer.Serialize(domainOrders);
-            var j = JsonConvert.SerializeObject(domainOrders);
-            Console.WriteLine($"\n{j}\n");
-            return new OrderResponce() { BestExecutionResponce = j, TotalPrice = totalPrice ?? 0 };            
+            string jsonString = JsonSerializer.Serialize(domainOrders, options);
+            Console.WriteLine($"\n{jsonString}\n");
+            return new OrderResponce() { BestExecutionResponce = jsonString, TotalPrice = totalPrice ?? 0 };            
         }
     }
 }
