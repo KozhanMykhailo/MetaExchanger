@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MetaExchanger.Application.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CryptoExchangeService : ICryptoExchangeService
     {
         private readonly IValidator<DomainOrder> _orderValidator;

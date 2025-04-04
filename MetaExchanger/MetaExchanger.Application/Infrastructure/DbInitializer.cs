@@ -2,6 +2,9 @@
 
 namespace MetaExchanger.Application.Infrastructure
 {
+    /// <summary>
+    /// Initialize start data in DB.
+    /// </summary>
     public class DbInitializer
     {
         private readonly ApplicationDbContext _context;

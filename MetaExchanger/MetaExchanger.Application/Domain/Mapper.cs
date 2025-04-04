@@ -3,6 +3,9 @@ using MetaExchanger.Application.Models;
 
 namespace MetaExchanger.Application.Domain
 {
+    /// <summary>
+    /// Domain mapper.
+    /// </summary>
     public static class Mapper
     {
         public static DomainOrder Convert(this Order order)

@@ -2,6 +2,9 @@
 
 namespace MetaExchanger.Application.Models
 {
+    /// <summary>
+    /// DbContext entity, contains data about order in Bids.
+    /// </summary>
     public class Order
     {
         public required Guid Id { get; init; }

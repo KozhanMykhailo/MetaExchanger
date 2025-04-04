@@ -1,5 +1,8 @@
 ﻿namespace MetaExchanger.Application.Common
 {
+    /// <summary>
+    /// Implementation of Error in Result Pattern.
+    /// </summary>
     public class Error
     {
         public string Message { get; }
@@ -9,6 +12,9 @@
         public override string ToString() => Message;
     }
 
+    /// <summary>
+    /// Returs empty result if Ok or error.
+    /// </summary>
     public class Result
     {
         private readonly Error? _error;
@@ -26,6 +32,9 @@
         private Result() { }
     }
 
+    /// <summary>
+    /// Returs value or error.
+    /// </summary>
     public class Result<T>
     {
         private readonly Error? _error;

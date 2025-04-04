@@ -2,6 +2,9 @@
 
 namespace MetaExchanger.Application.Domain.Validators
 {
+    /// <summary>
+    /// DomainOrder validator.
+    /// </summary>
     public class DomainOrderValidator : AbstractValidator<DomainOrder>
     {
         public DomainOrderValidator()

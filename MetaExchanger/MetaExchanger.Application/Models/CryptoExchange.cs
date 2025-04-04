@@ -2,6 +2,9 @@
 
 namespace MetaExchanger.Application.Models
 {
+    /// <summary>
+    /// DbContext entity, contains data about available  cryptoExchange and its offers.
+    /// </summary>
     public class CryptoExchange
     {
         [Key]

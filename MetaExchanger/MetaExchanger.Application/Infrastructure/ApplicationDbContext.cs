@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MetaExchanger.Application.Infrastructure
 {
+    /// <summary>
+    /// EF Core DB context.
+    /// </summary>
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }

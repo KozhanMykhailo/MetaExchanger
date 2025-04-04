@@ -1,8 +1,10 @@
 ﻿using MetaExchanger.Application.Common;
-using MetaExchanger.Application.Models;
 
 namespace MetaExchanger.Application.Domain
 {
+    /// <summary>
+    /// Domain entity, between dbContext and response(dto).
+    /// </summary>
     public class DomainOrder
     {
         public required Guid Id { get; init; }
