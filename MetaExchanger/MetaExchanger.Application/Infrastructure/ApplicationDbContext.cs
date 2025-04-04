@@ -17,7 +17,11 @@ namespace MetaExchanger.Application.Infrastructure
                 .HasOne(o => o.CryptoExchange)
                 .WithMany(u => u.Bids)
                 .HasForeignKey(o => o.CryptoExchangeId)
-                .OnDelete(DeleteBehavior.Cascade);           
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Order>()
+                .HasIndex(o => o.Type)
+                .HasDatabaseName("IX_Orders_Type");
         }
     }
 }

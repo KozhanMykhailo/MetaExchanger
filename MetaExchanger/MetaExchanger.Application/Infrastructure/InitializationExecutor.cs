@@ -7,7 +7,7 @@ namespace MetaExchanger.Application.Infrastructure
     /// <summary>
     /// Contains functionality for initialization data from .txt file.
     /// </summary>
-    public static class InitializerExecutor
+    public static class InitializationExecutor
     {
         /// <summary>
         /// Read and deserialize from file.

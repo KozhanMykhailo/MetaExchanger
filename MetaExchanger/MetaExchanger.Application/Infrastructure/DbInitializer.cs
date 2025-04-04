@@ -1,7 +1,4 @@
-﻿using MetaExchanger.Application.Infrastructure.HelpersModels;
-using MetaExchanger.Application.Models;
-using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace MetaExchanger.Application.Infrastructure
 {
@@ -19,7 +16,7 @@ namespace MetaExchanger.Application.Infrastructure
             if (await _context.CryptoExchanges.AnyAsync())
                 return;
 
-            var result = InitializerExecutor.CreateEntitiesFromFile(@"Infrastructure/order_books_data.txt");
+            var result = InitializationExecutor.CreateEntitiesFromFile(@"Infrastructure/order_books_data.txt");
 
             foreach (var cryptoExchange in result) 
             {

@@ -6,7 +6,7 @@ namespace MetaExchanger.Application.Models
     {
         public required Guid Id { get; init; }
 
-        public required DateTime Time { get; init; }
+        public required DateTime? Time { get; init; }
 
         public required string Type { get; init; }
 
