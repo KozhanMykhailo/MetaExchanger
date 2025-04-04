@@ -30,7 +30,9 @@ namespace MetaExchanger.Api.IntegrationTests
 
         private static string? GetConnectionString()
         {
-           return "Server=localhost,1433;Database=MyDatabase;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;";
+            var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+
+            return configuration.GetSection("Database")["ConnectionString"];
         }
 
         private static ApplicationDbContext CreateDbContext(IServiceCollection services)
