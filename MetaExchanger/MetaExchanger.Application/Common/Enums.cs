@@ -2,6 +2,9 @@
 
 namespace MetaExchanger.Application.Common
 {
+    /// <summary>
+    /// Operation type.
+    /// </summary>
     [JsonConverter(typeof(JsonStringEnumConverter<OperationType>))]
     public enum OperationType
     {
@@ -9,6 +12,9 @@ namespace MetaExchanger.Application.Common
         Sell
     }
 
+    /// <summary>
+    /// Kind. Only Limit now.
+    /// </summary>
     public enum Kind
     {
         Limit
