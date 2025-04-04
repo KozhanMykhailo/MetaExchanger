@@ -31,4 +31,5 @@ Also you can run locally through VS19+:
 
 - Open swagger: http://localhost:5229/swagger/index.html
 
+![image](https://github.com/user-attachments/assets/1f33fb67-c708-4792-84b6-ad1c6db531cc)
 
