@@ -14,7 +14,7 @@ namespace MetaExchanger.Application.Domain
                 CryptoExchangeId = order.CryptoExchangeId,
                 Kind = Kind.Limit,
                 Price = order.Price,
-                Time = order.Time,
+                Time = order.Time ?? DateTime.Now,
                 Type = OperationType.Buy
             };
         }

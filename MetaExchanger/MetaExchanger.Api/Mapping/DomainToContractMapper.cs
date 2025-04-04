@@ -16,7 +16,7 @@ namespace MetaExchanger.Api.Mapping
                 NumberHandling =
                     JsonNumberHandling.AllowReadingFromString |
                     JsonNumberHandling.WriteAsString,
-                WriteIndented = true
+                WriteIndented = false
             };
             string jsonString = JsonSerializer.Serialize(domainOrders, options);
             Console.WriteLine($"\n{jsonString}\n");
